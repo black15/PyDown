@@ -1,7 +1,6 @@
 # Coded By : black15
 # Date : 2018/05/03
 # This Tool Can Download any File (png,jar,iso,pdf,rar,zip....) From Any Web Site for More INFO see the Descrpition 
-# DON't Change The Description of This Tool >> (I'm Kidding ^_^ )
 
 import os
 from time import sleep
@@ -11,15 +10,15 @@ from optparse import OptionParser
 
 def welcome():
 	print('''\033[1;31m
-	
- _____   ______          ___   _ _      ____          _____  ______ _____  
+			 
+			  _____   ______          ___   _ _      ____          _____  ______ _____  
 |  __ \ / __ \ \        / / \ | | |    / __ \   /\   |  __ \|  ____|  __ \ 
 | |  | | |  | \ \  /\  / /|  \| | |   | |  | | /  \  | |  | | |__  | |__) |
 | |  | | |  | |\ \/  \/ / | . ` | |   | |  | |/ /\ \ | |  | |  __| |  _  / 
 | |__| | |__| | \  /\  /  | |\  | |___| |__| / ____ \| |__| | |____| | \ \ 
 |_____/ \____/   \/  \/   |_| \_|______\____/_/    \_\_____/|______|_|  \_\
-
-	print('\033[1;31m				     by :>: BLACK.15 				\033[1;m')																								
+			 ''')
+	print('\033[1;31m				     by :>: BLACK.15 				\033[1;m')												
 def Usage():
 
 	parser = OptionParser('''
