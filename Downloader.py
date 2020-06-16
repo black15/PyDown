@@ -4,6 +4,7 @@
 # DON't Change The Description of This Tool >> (I'm Kidding ^_^ )
 
 import os
+from time import sleep
 import urllib.request
 from tqdm import tqdm
 from optparse import OptionParser
@@ -58,6 +59,10 @@ python3 Downloader.py --url https://wallpapertag.com/wallpaper/full/c/b/4/515350
 			openfile.write(Buffer)
 		openfile.close()
 		print('The File Has Been Downloaded :> {}'.format(file_name))
-welcome()
-Usage()
-
+try:
+	welcome()
+	Usage()
+except KeyboardInterrupt :
+	sleep(1)
+	print("Shutting Down ...")
+	sleep(1)
