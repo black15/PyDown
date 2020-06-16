@@ -63,5 +63,5 @@ try:
 	Usage()
 except KeyboardInterrupt :
 	sleep(1)
-	print("Shutting Down ...")
+	print("\nShutting Down ...\n")
 	sleep(1)
