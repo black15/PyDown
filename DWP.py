@@ -60,15 +60,23 @@ python3 DWP.py --url http://www.site.com/file.(exe,pdf,jar,pnj,iso..)
 			i = i + block_size
 			openfile.write(Buffer)
 		openfile.close()
-		print(Fore.GREEN + '\n[*] The File Has Been Downloaded :> {}'.format(file_name))
+		print(Fore.GREEN + '\n[*] The File Has Been Downloaded :> {}\n'.format(file_name))
 try:
 	welcome()
 	Usage()
 except KeyboardInterrupt :
 	sleep(1)
-	print(Fore.RED + "\n[!] Shutting Down ...\n")
+	slowprints1(Fore.RED + "\n[!] Shutting Down ...\n")
+	sleep(1)
+except urllib.error.HTTPError:
+	sleep(1)
+	slowprints1(Fore.RED + "\n[!] Check URL Again\n ")
 	sleep(1)
 except ValueError:
 	sleep(1)
-	print(Fore.RED + "\n[!] Check URL Again ")
+	slowprints1(Fore.RED + "\n[!] Check URL Again\n ")
+	sleep(1)
+except TypeError:
+	sleep(1)
+	slowprints1(Fore.RED + "\n[!] There Must Be A File Extension At The END of URL (.iso / .mp4 / .php ...)\n ")
 	sleep(1)
