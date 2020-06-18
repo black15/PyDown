@@ -14,7 +14,7 @@ python3 Downloader.py --url http://www.site.com/file.(exe,pdf,jar,pnj,iso...)
 
 # Example :
 	
-python3 Downloader.py -u https://osdn.net/frs/g_redir.php?m=kent&f=parrotsecurity%2Fiso%2F4.0.1%2FParrot-security-4.0.1_amd64.iso
+python3 Downloader.py -u https://download.parrot.sh/parrot/iso/4.9.1/Parrot-security-4.9.1_x64.iso
 
-python3 Downloader.py --url https://osdn.net/frs/g_redir.php?m=kent&f=parrotsecurity%2Fiso%2F4.0.1%2FParrot-security-4.0.1_amd64.iso
+python3 Downloader.py --url https://download.parrot.sh/parrot/iso/4.9.1/Parrot-security-4.9.1_x64.iso
 
