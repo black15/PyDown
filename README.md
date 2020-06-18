@@ -1,10 +1,11 @@
 # PyDown
 
-Download Files From Any Web Site , COOL !
+Download Files(png,iso,mp4,...) From The WEB !
 
 # Install Requiremenets:
 
 pip3 install tqdm
+
 pip3 install colorama
 
 # Usage:
