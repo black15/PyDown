@@ -2,11 +2,19 @@
 # Date : 2018/05/03
 # This Tool Can Download any File (png,jar,iso,pdf,rar,zip....) From Any Web Site for More INFO see the Descrpition 
 
-import os
+import os,sys
 from time import sleep
 import urllib.request
 from tqdm import tqdm
 from optparse import OptionParser
+import colorama
+from colorama import Fore, Style
+
+def slowprints1(slow):
+        for slowprint in slow +"\n":
+            sys.stdout.write(slowprint)
+            sys.stdout.flush()
+            sleep(3./90)
 
 def welcome():
 	print('''\033[1;31m
@@ -15,25 +23,20 @@ def welcome():
  			  | / | THE DOWNLOADER WITH PYTHON3 | \ |
  			  |___|                             |___|
 			 (_____)---------------------------(_____)''')
-	print('\033[1;31m				     by :>: BLACK.15 				\033[1;m')												
+	slowprints1('\033[1;31m				     BY : > B14CK_DZ 				\033[1;m')												
 def Usage():
 
 	parser = OptionParser('''
 	\033[1;31m
 			 -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-
-				The Downloader With Python3
+
+				DOWNLOAD FILES WITH PYTHON
 			 _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 	\033[1;m
 Usage:
 
-python3 Downloader.py -u http://www.site.com/download.(exe,pdf,jar,pnj,iso ......)
-python3 Downloader.py --url http://www.site.com/download.(exe,pdf,jar,pnj,iso ......)
-
-Example :
-	
-python3 Downloader.py -u https://wallpapertag.com/wallpaper/full/c/b/4/515350-top-natsu-dragneel-wallpaper-1920x1378.jpg
-python3 Downloader.py --url https://wallpapertag.com/wallpaper/full/c/b/4/515350-top-natsu-dragneel-wallpaper-1920x1378.jpg
-
+python3 DWP.py -u http://www.site.com/file.(exe,pdf,jar,pnj,iso..)
+python3 DWP.py --url http://www.site.com/file.(exe,pdf,jar,pnj,iso..)
 	''')
 
 
@@ -57,11 +60,15 @@ python3 Downloader.py --url https://wallpapertag.com/wallpaper/full/c/b/4/515350
 			i = i + block_size
 			openfile.write(Buffer)
 		openfile.close()
-		print('The File Has Been Downloaded :> {}'.format(file_name))
+		print(Fore.GREEN + '[*] The File Has Been Downloaded :> {}'.format(file_name))
 try:
 	welcome()
 	Usage()
 except KeyboardInterrupt :
 	sleep(1)
-	print("\nShutting Down ...\n")
+	print(Fore.RED + "\n[!] Shutting Down ...\n")
+	sleep(1)
+except ValueError:
+	sleep(1)
+	print(Fore.RED + "\n[!] Check URL Again ")
 	sleep(1)
