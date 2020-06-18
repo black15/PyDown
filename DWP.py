@@ -70,13 +70,17 @@ except KeyboardInterrupt :
 	sleep(1)
 except urllib.error.HTTPError:
 	sleep(1)
-	slowprints1(Fore.RED + "\n[!] Check URL Again\n ")
+	slowprints1(Fore.RED + "\n[!] URL ERROR \n ")
 	sleep(1)
 except ValueError:
 	sleep(1)
-	slowprints1(Fore.RED + "\n[!] Check URL Again\n ")
+	slowprints1(Fore.RED + "\n[!] URL ERROR \n ")
 	sleep(1)
 except TypeError:
 	sleep(1)
-	slowprints1(Fore.RED + "\n[!] There Must Be A File Extension At The END of URL (.iso / .mp4 / .php ...)\n ")
+	slowprints1(Fore.RED + "\n[!] FILE DOSEN'T EXIST\n ")
+	sleep(1)
+except urllib.error.URLError:
+	sleep(1)
+	slowprints1(Fore.RED + "\n[!] URL ERROR \n ")
 	sleep(1)
