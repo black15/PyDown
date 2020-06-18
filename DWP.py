@@ -60,7 +60,7 @@ python3 DWP.py --url http://www.site.com/file.(exe,pdf,jar,pnj,iso..)
 			i = i + block_size
 			openfile.write(Buffer)
 		openfile.close()
-		print(Fore.GREEN + '[*] The File Has Been Downloaded :> {}'.format(file_name))
+		print(Fore.GREEN + '\n[*] The File Has Been Downloaded :> {}'.format(file_name))
 try:
 	welcome()
 	Usage()
