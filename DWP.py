@@ -35,24 +35,28 @@ def Usage():
 	\033[1;m
 Usage:
 
-python3 DWP.py -u http://www.site.com/file.(exe,pdf,jar,pnj,iso..)
-python3 DWP.py --url http://www.site.com/file.(exe,pdf,jar,pnj,iso..)
+python3 DWP.py -u http://www.site.com/file.(exe,pdf,jar,pnj,iso..) -o filename
+python3 DWP.py --url http://www.site.com/file.(exe,pdf,jar,pnj,iso..) --output filename
 	''')
 
 
 	parser.add_option('-u','--url',dest='my_url',type='string')
-
+	parser.add_option('-o','--output',dest='file_name',type='string')
 	(options,args) = parser.parse_args()
 
 	if options.my_url == None:
 		print(parser.usage)
-
+		sys.exit(1)
+	if options.file_name==None:
+		print(parser.usage)
+		sys.exit(1)
 	else :
 	
 		URL = options.my_url
+		name= options.file_name
 		urlopen = urllib.request.urlopen(URL)
 		file_name = URL.split('/')[-1]
-		openfile = open(file_name,'wb')
+		openfile = open(name,'wb')
 		block_size = 1000
 		file_size = int(urlopen.headers['Content-Length'])
 		for i in tqdm(range(file_size)):
