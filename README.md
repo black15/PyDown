@@ -1,6 +1,6 @@
 # PyDown
 
-- Download Files(png,iso,mp4, etc..) From Any Puclic Webiste .
+- Download Files From Any Public URLs With a Progess Bar Using Python .
 
 ## Install Requiremenets:
 
